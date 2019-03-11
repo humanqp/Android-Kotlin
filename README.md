@@ -101,7 +101,26 @@
   ```kotlin
   var param:LinearLayout.LayoutParams = view.layoutParams as LinearLayout.LayoutParams
   ```
-  - 
+  - NPE에 안전한 변수 선언 방법
+  ```kotlin
+  //? null 허용
+  var a:String? = "abc"
+  a = null
+  ```
+  ```kotlin
+  //null 일 때 초기화 지정
+  var a:String? = "abc"
+  a = null
+  var len:Int = a?.length?:0
+  ```
+  ```kotlin
+  //!!을 참조할 수 있도록 허용
+  var a:String? = "abc"
+  a = null
+  var len:Int = a!!.length
+  //null을 참조하기 때문에 exception이 나게 됨
+  ```
+  
   
   
   
