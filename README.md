@@ -69,7 +69,28 @@
   ```
   
 > ### 콜렉션
+  - listOf
+  ```kotlin 
+  val nameList = listOf("A","B","C")
+  for(i in 0..nameList.size-1){
+  }
+  ```
+  - mutableListOf
+  ```kotlin
+  var nameList = mutableListOf<String>()
+  if(nameList.isEmpty()){
+    nameList.add("No Name")
+  }
+  ```
+  - 콜렉션 null filterNotNull
+  ```kotlin
+  val nameList = listOf("A","B","C")
+  for(name in nameList.filterNotNull()){
+    print(name)
+  }
+  ```
   - 
+  
   
   
   
