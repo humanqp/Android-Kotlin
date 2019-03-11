@@ -33,5 +33,36 @@
   for(i in 10 downTo 1 step 2){
   }
   ```
+  - list size
+  ```kotlin
+  for(i in 0..data.size-1){
+  }
+  ```
+  - list iterator
+  ```kotlin
+  var nameList:Array<String> = arrayOf("A","B","C")
+  for(name:String in nameList){
+  
+  }
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
