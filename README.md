@@ -12,4 +12,26 @@
     return total
   }
   ```
-> ### 
+> ### 흐름 제어 연산자
+  - 1<i<10
+  ```kotlin
+  for(i in 2..9){
+  }
+  ```
+  - 10>i>1
+  ```kotlin
+  for(i in 9 downTo 2){
+  }
+  ```
+  - 1<i<10 i+2
+  ```kotlin
+  for(i in 2..9 step 2){
+  }
+  ```
+  - 11<i<1 i-2
+  ```kotlin
+  for(i in 10 downTo 1 step 2){
+  }
+  ```
+  
+  
