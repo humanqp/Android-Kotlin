@@ -117,8 +117,7 @@
   //!!을 참조할 수 있도록 허용
   var a:String? = "abc"
   a = null
-  var len:Int = a!!.length
-  //null을 참조하기 때문에 exception이 나게 됨
+  var len:Int = a!!.length //null을 참조하기 때문에 exception이 나게 됨
   ```
   
   
