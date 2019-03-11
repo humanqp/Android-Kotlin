@@ -119,7 +119,7 @@
   a = null
   var len:Int = a!!.length //null을 참조하기 때문에 exception이 나게 됨
   ```
-  
+  - == , ===(pointer까지 같은지 확인) 연산자 
   
   
   
