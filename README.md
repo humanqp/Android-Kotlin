@@ -89,6 +89,18 @@
     print(name)
   }
   ```
+  - 콜렉션 + - : 콜렉션 내용을 추가, 삭제 할 수 있음 p66
+  
+> ### 타입 체크와 비교 연산
+  - 타입 체크 : is
+  ```kotlin
+  if(view is LinearLayout){
+  }
+  ```
+  - 타입 캐스팅 as
+  ```kotlin
+  var param:LinearLayout.LayoutParams = view.layoutParams as LinearLayout.LayoutParams
+  ```
   - 
   
   
