@@ -45,6 +45,28 @@
   
   }
   ```
+  - switch 대신 when
+  ```kotlin
+  override fun onClick(v:View?){
+    when(v?.id){
+      R.id.search_button ->{
+      }
+      R.id.search_go_bth ->{
+      }
+    }
+  }
+  ```
+  
+  ```kotlin
+  //when에 지정된 값이 없는 경우 연산으로 사용 가능.
+  fun Test(number:Int){
+    when{
+      조건1->결과1
+      조건2->결과2
+      조건3->결과3
+    }
+  }
+  ```
   
   
   
