@@ -1,6 +1,8 @@
 # Android Kotlin
 > ### Kotlin 아름다운 기능들 : https://academy.realm.io/kr/posts/kotlin-let-run-apply-lateinit/
 
+> ### Kotlin 더 잘 활용하기 : https://thdev.tech/kotlin/2018/08/13/Kotlin-Improving/
+
 > ### vararg
   - 다양한 변수 값을 하나의 변수로 전달 받을 때 사용 함
   ```kotlin
