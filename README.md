@@ -131,7 +131,7 @@
   
 > ### 제네릭
   - 와일드 카드(?) : 모든 객체 대입 가능 
-  - Ex> java
+  - Ex> java extends 하위 제한 
   ```java
   public <T> void copy(List<T> dest, List<? extends T> src) {
     for(T item:src){
@@ -140,14 +140,110 @@
   }
   ```
   - Ex> kotlin
-  ```kotlin
+  ```kotlin out 하위 제한 
   fun copy(dest:List<T>, src:List<out T>{
     for(item:T in src){
     
     }
   }
   ```
-  - 
+  - Ex> java super -> kotlin in 상위 제한
+  ```kotlin
+  fun <T> fill(list: List<in T>, obj: T){
+    val size = list.size
+    
+  }
+  ```
+  ```kotlin
+  class Person{
+  
+  }
+  class PersonType<in Person>{
+  
+  }
+  ```
+  
+> ### 그 밖의 유용한 함수들
+  - apply() : block으로 정의된 구간을 수행하고 apply를 사용한 객체를 다시 반환해줍니다. 특징, 리턴값으로 인자를 넘겨 줌
+  ```kotlin
+  fun setWindowParam(){
+    window.attributes = WindowManager.LayoutParams().apply{
+      flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND
+      dimAmount = 0.8f
+  }
+  ```
+  - run() : 어떤 경우에는 어떤 인스턴스에 관련된 필드나 메서드에 연속적으로 접근해야할 때가 있습니다. 이런 경우 run을 쓸 수 있습니다.
+            run() = with() + let()을 혼합해 놓은 함수 임.
+  ```kotlin
+  class RepoViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
+    fun setRepo(repo: Repository) {
+      view.run {
+        //view 내의 필드나 메서드를 대한 접근이 암목적으로 허용되기 때문에, findViewById 사용 가능.
+        findViewById(R.id.fg).setOnClickListener {
+          val message = repo.run {
+            "\n".join(fullName, language)
+          }
+          Toast.makeText(view.context, message, Toast.LENGTH_SHORT).show()
+        }
+        ...
+      }
+    }
+  }
+  ```
+  - let() : let은 값이 있는 경우에 다른 코드 블록을 추가로 수행하는 것입니다.
+  ```kotlin
+  override fun onBindViewHolder(holder: RepoViewHolder?, position: int) {
+    repos.getOrNull(position)?.let {
+      holder?.setRepo(it)
+    }
+  }
+  ```
+  - with() : 기존의 함수들과 다르게 넘기려는 객체를 괄호 안에 넣어 주고 {}를 수행하도록 함. 
+  ```kotlin
+  with(convertView){
+    findViewById(R.id.add).setOnClickListerner{
+      Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+    }
+  }
+  ```
+ - forEach() : for문을 사용하지 않고 콜렉션에 바로 접근해서 사용할 수 있음.
+ ```kotlin
+ fun getDataIndex(data: ArrayList<WeekList>):Int {
+  val current:Long = Date().time
+  (0..data.size-1).forEach{
+    if(current < data[i].dt.toLong()){
+      return i;
+    }
+  }
+ }
+ ```
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
