@@ -120,6 +120,84 @@
   var len:Int = a!!.length //null을 참조하기 때문에 exception이 나게 됨
   ```
   - == , ===(pointer까지 같은지 확인) 연산자 
+
+> ### 람다
+  - add 함수를 람다로 구현
+  ```kotlin
+  (x,y)->x+y
+  ```
+  - 언더스코어( _ ) : 사용하지 않은 인자 처리.
+  - inline 키워드 : 함수 호출을 하지 않고 코드를 그래로 프로그램 중 실행 함.
+  
+> ### 제네릭
+  - 와일드 카드(?) : 모든 객체 대입 가능 
+  - Ex> java
+  ```java
+  public <T> void copy(List<T. dest, List<? extends T> src) {
+    for(T item:src){
+      dest.add(item);
+    }
+  }
+  ```
+  - Ex> kotlin
+  ```kotlin
+  fun copy(dest:List<T>, src:List<out T>{
+    for(item:T in src){
+    
+    }
+  }
+  ```
+  - 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
