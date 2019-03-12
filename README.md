@@ -133,7 +133,7 @@
   - 와일드 카드(?) : 모든 객체 대입 가능 
   - Ex> java
   ```java
-  public <T> void copy(List<T. dest, List<? extends T> src) {
+  public <T> void copy(List<T> dest, List<? extends T> src) {
     for(T item:src){
       dest.add(item);
     }
