@@ -217,10 +217,63 @@
   }
  }
  ```
- - onEach() :
- - fillter() :
- - lazy() :
- - lateinit :
+ - onEach() : forEach 함수와 비슷하며, {}안에 취한 행동의 결과값을 반환 측면에서 조금 다름.
+ ```kotlin
+ fun getListSize(list:Array<Persion>):Int = list.filter{it.age >= 30}
+    .onEach{ Toast.makeText(this, "Hello ${it.name}", Toast.LENGTH_SHORT).show() }.size
+ ```
+ - fillter() : 콜렉션의 filter 함술르 사용 할 때 
+ ```kotlin
+ fun addOdd():Int{
+  var result = 0;
+  //1~50까지 중 홀수만 필터하여 forEach로 전달하고 해당 내용을 합산하여 return 함.
+  (1..50).filter { (it%2 - 1) == 0 }.forEach { result += it}
+  return result
+ }
+ ```
+ - lazy() : 변수가 선언되는 시점에 초기화를 진행하지 않고 사용되는 시점에 생성이 되도록 함.
+ ```kotlin
+ class MainActiviy : AppCompatActivity(){
+  val toolbar: Toolbar by lazy{
+    findViewById(R.id.toolbar) as Toolbar
+  }
+  override fun onCreate(savedInstanceState: Bundle?){
+    toolbar.setTitle("")
+  }
+ }
+ ```
+ - lateinit : var만 사용 가능 >> 확인 필요.
+ ```kotlin
+ class MainActiviy : AppCompatActivity(){
+  
+  lateinit var toolbar: Toolbar
+  
+  override fun onCreate(savedInstanceState: Bundle?){
+    setContentView(R.layout.activity_main) 
+    toolbar = findViewById(R.id.toolbar) as Toolbartoolbar.setTitle("")
+  }
+ }
+ ```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
