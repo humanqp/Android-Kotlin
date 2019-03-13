@@ -166,7 +166,7 @@
   ```
   
 > ### 그 밖의 유용한 함수들
-  - apply() : block으로 정의된 구간을 수행하고 apply를 사용한 객체를 다시 반환해줍니다. -특징, 리턴값으로 인자를 넘겨 줌-
+  - apply() : block으로 정의된 구간을 수행하고 apply를 사용한 객체를 다시 반환해줍니다. 특징, 리턴값으로 인자를 넘겨 줌
   ```kotlin
   fun setWindowParam(){
     window.attributes = WindowManager.LayoutParams().apply{
