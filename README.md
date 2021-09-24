@@ -4,6 +4,7 @@
 > ### Kotlin 더 잘 활용하기 : https://thdev.tech/kotlin/2018/08/13/Kotlin-Improving/
 
 > ### vararg
+  - ?: 엘비스 
   - 다양한 변수 값을 하나의 변수로 전달 받을 때 사용 함
   ```kotlin
   fun add(varage numbers:Int):Int 
